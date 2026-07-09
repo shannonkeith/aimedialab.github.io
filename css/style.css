@@ -1,0 +1,223 @@
+:root {
+  --wsu-green: #0c5449;
+  --wsu-green-dark: #083a32;
+  --wsu-gold: #ffcc33;
+  --ink: #1a1a1a;
+  --paper: #ffffff;
+  --paper-alt: #f4f6f5;
+  --muted: #5a6a66;
+  --max-width: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 { line-height: 1.2; margin-top: 0; }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid #e4e8e6;
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--wsu-green);
+  text-decoration: none;
+}
+
+.site-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover { color: var(--wsu-green); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--wsu-green) 0%, var(--wsu-green-dark) 100%);
+  color: #fff;
+  padding: 96px 0 88px;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--wsu-gold);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: #e5efec;
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--wsu-gold);
+  color: var(--wsu-green-dark);
+}
+
+.btn-primary:hover { background: #ffd75c; }
+
+/* Sections */
+.section { padding: 72px 0; }
+.section-alt { background: var(--paper-alt); }
+
+.section h2 {
+  font-size: 2rem;
+  color: var(--wsu-green);
+  margin-bottom: 16px;
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 700px;
+}
+
+/* Value grid */
+.value-grid {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+.value-grid h3 {
+  color: var(--wsu-green);
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.value-grid p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+/* Service cards */
+.service-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--paper);
+  border: 1px solid #e4e8e6;
+  border-top: 3px solid var(--wsu-gold);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.service-card h3 {
+  color: var(--wsu-green);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.service-card p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+/* Process list */
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0;
+  counter-reset: step;
+}
+
+.process-list li {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e4e8e6;
+}
+
+.process-list li:last-child { border-bottom: none; }
+
+.step-num {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--wsu-green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.process-list h3 {
+  color: var(--wsu-green);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.process-list p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+/* Contact */
+.contact-inner { text-align: center; }
+.contact-inner .lede { margin: 0 auto 28px; }
+
+/* Footer */
+.site-footer {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid #e4e8e6;
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2rem; }
+  .site-nav a { margin-left: 14px; font-size: 0.85rem; }
+}
