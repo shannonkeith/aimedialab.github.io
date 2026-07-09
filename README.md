@@ -1,2 +1,2 @@
-# aimedialab..github.io
+# aimedialab.github.io
 Development of media lab 
